@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle(() => `
     font-family: Bitter, serif;
     font-family: Montserrat, sans-serif;
   }
+
+  ul {
+    list-style-type: none;
+  }
+
 `);
 
 export default GlobalStyle;

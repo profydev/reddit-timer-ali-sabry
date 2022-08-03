@@ -1,14 +1,24 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { Home, GlobalStyle } from './components';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import GlobalStyle from './global/Style';
+
+import {
+  Header, Home, Search, Footer,
+} from './components';
 
 const App = () => (
-  <div>
+  <>
     <GlobalStyle />
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
-  </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+    </Router>
+    <Footer />
+  </>
 );
 
 export default App;

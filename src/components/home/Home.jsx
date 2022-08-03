@@ -1,11 +1,3 @@
-import Header from './header/Header';
-import Content from './content/Content';
-
-const Home = () => (
-  <>
-    <Header />
-    <Content />
-  </>
-);
+const Home = () => <h1>home</h1>;
 
 export default Home;
