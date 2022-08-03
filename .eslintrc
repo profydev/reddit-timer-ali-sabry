@@ -9,11 +9,14 @@
   "extends": ["airbnb"],
   "plugins": ["cypress", "react-hooks"],
   "rules": {
+    "linebreak-style": 0,
     "cypress/no-assigning-return-values": "error",
     "cypress/no-unnecessary-waiting": "error",
     "cypress/assertion-before-screenshot": "warn",
     "cypress/no-force": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-indent" : ["error", 2],
+    "react/react-in-jsx-scope": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"
   }

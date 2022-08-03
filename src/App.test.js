@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import Header from './components/header/Header';
 
-test('renders App', () => {
-  render(<App />);
+test('Header', () => {
+  render(<Header />);
 });
