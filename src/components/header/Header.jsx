@@ -8,7 +8,7 @@ const Header = () => (
     </Logo>
     <Links>
       <a href="/search/javascript">Search</a>
-      <a href="/#how-it-works">How It Works</a>
+      <a href="/#how-it-works">How it works</a>
       <a href="/#about">About</a>
     </Links>
   </Navbar>
