@@ -1,3 +1,3 @@
-const Search = () => <h1>Search</h1>;
+const Search = () => <h1>search page</h1>;
 
 export default Search;
