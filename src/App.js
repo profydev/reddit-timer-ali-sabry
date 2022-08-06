@@ -1,23 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import theme from './theme/Theme';
-import GlobalStyle from './global/Style';
+import { Theme, GlobalStyle } from './style';
 
-import {
-  Header, Home, Search, Footer,
-} from './components';
+import { Home, Search, Footer } from './components';
+
+import Header from './common/header';
 
 const App = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={Theme}>
     <GlobalStyle />
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search/:value" element={<Search />} />
-      </Routes>
-    </Router>
+    <Header />
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/search/:value" children={<Search />} />
+    </Switch>
+    <section id="how-it-works">
+      How it works
+    </section>
+    <section id="about">
+      About
+    </section>
     <Footer />
   </ThemeProvider>
 );

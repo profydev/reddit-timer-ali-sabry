@@ -5,11 +5,20 @@
     "es6": true,
     "cypress/globals": true
   },
+  "settings": {
+      "import/resolver": {
+          "node": {
+              "extensions": [".js", ".jsx", ".ts", ".tsx"],
+              "moduleDirectory": ["node_modules", "src/"]
+          }
+      }
+  },
   "parser": "babel-eslint",
   "extends": ["airbnb"],
   "plugins": ["cypress", "react-hooks"],
   "rules": {
     "linebreak-style": 0,
+    "react/no-children-prop": 0,
     "cypress/no-assigning-return-values": "error",
     "cypress/no-unnecessary-waiting": "error",
     "cypress/assertion-before-screenshot": "warn",
